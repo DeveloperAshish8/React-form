@@ -1,0 +1,55 @@
+[
+  {
+    "id": "username",
+    "name": "Username",
+    "type": "text",
+    "required": true,
+    "regex": "^[a-zA-Z0-9_]{3,16}$"
+  },
+  {
+    "id": "password",
+    "name": "Password",
+    "type": "password",
+    "required": true,
+    "regex": "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
+  },
+  {
+    "id": "gender",
+    "name": "Gender",
+    "type": "radio",
+    "required": true,
+    "options": [
+      { "label": "Male", "value": "male" },
+      { "label": "Female", "value": "female" }
+    ]
+  },
+
+  {
+    "id": "documents",
+    "name": "Documents",
+    "type": "file",
+    "required": true,
+    "fileFormatSupported": ["pdf", "doc"]
+  },
+  {
+    "id": "hobbies",
+    "name": "Hobbies",
+    "type": "checkbox",
+    "options": [
+      { "label": "Reading", "value": "reading" },
+      { "label": "Traveling", "value": "traveling" },
+      { "label": "Gaming", "value": "gaming" }
+    ]
+  },
+  {
+    "id": "country",
+    "name": "Country",
+    "type": "select",
+    "required": false,
+    "options": [
+      { "label": "United States", "value": "us" },
+      { "label": "Canada", "value": "ca" },
+      { "label": "India", "value": "ind" }
+    ]
+  }
+]
