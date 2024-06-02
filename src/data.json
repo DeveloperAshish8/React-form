@@ -29,7 +29,7 @@
     "name": "Documents",
     "type": "file",
     "required": true,
-    "fileFormatSupported": ["pdf", "doc"]
+    "fileFormatSupported": [""]
   },
   {
     "id": "hobbies",
@@ -45,7 +45,7 @@
     "id": "country",
     "name": "Country",
     "type": "select",
-    "required": false,
+    "required": true,
     "options": [
       { "label": "United States", "value": "us" },
       { "label": "Canada", "value": "ca" },

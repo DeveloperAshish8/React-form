@@ -24,6 +24,8 @@ const DynamicForm = ({ formData }) => {
   });
 
   const formValidationSchema = Yup.object().shape(validationSchema);
+  const formatFileFormats = (formats) =>
+    formats.map((format) => `.${format}`).join(",");
 
   return (
     <div className="flex flex-col md:w-[550px] w-[90%] mx-auto my-10 bg-slate-100 px-7 py-3 rounded-xl">
@@ -93,6 +95,7 @@ const DynamicForm = ({ formData }) => {
                     id={field.id}
                     name={field.id}
                     type="file"
+                    accept={formatFileFormats(field.fileFormatSupported)}
                     onChange={(event) => {
                       setFieldValue(field.id, event.currentTarget.files[0]);
                     }}
